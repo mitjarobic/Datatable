@@ -17,9 +17,9 @@ class DatatableServiceProvider extends ServiceProvider {
         //$this->package('chumper/datatable');
         $viewPath = __DIR__.'/../../views/';
         $this->loadViewsFrom($viewPath, 'Chumper');
-//        $this->publishes([
-//            $viewPath => base_path('resources/views/vendor/Chumper'),
-//        ]);
+        $this->publishes([
+            $viewPath => base_path('resources/views/vendor/Chumper'),
+        ]);
     }
 
     /**
@@ -30,7 +30,7 @@ class DatatableServiceProvider extends ServiceProvider {
     public function register()
     {
         $configPath = __DIR__.'/../../config/config.php';
-        $this->publishes([$configPath => config_path('datatable.php'),]);
+        $this->publishes([$configPath => config_path('chumper_datatable.php'),]);
         $this->app['datatable'] = $this->app->share(function($app)
         {
             return new Datatable;
