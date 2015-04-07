@@ -107,6 +107,8 @@ return array(
         */
 
         'script_view' => 'datatable::javascript',
+        'table_view' => 'Chumper::template',
+        'script_view' => 'Chumper::javascript',
 
 
     ),

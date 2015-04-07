@@ -85,7 +85,8 @@ class Table {
 
     function __construct()
     {
-        $this->config = Config::get('datatable::table');
+//        $this->config = Config::get('datatable::table');
+        $this->config = Config('chumper_datatable.table');
 
         $this->setId( $this->config['id'] );
         $this->setClass( $this->config['class'] );
